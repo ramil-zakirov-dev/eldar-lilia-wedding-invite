@@ -7,10 +7,10 @@ const WeddingLocation = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">
-            Место проведения
+            Узгарыр урын
           </h2>
           <p className="text-lg text-muted-foreground font-elegant">
-            Мы будем рады видеть вас в этом особенном месте
+            Без сезне бу махсус урында күрүгә шат булачакбыз
           </p>
         </div>
 
@@ -22,13 +22,13 @@ const WeddingLocation = () => {
                 <MapPin className="text-primary mt-1 flex-shrink-0" size={24} />
                 <div>
                   <h3 className="text-2xl font-elegant text-primary mb-2">
-                    Кафе "Туган як"
+                    "Туган як" кафесы
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    Уютное и атмосферное место для нашего торжества
+                    Безнең туй йолаларына уңайлы һәм атмосфералы урын
                   </p>
                   <p className="text-foreground font-medium">
-                    Яныль, Республика Татарстан
+                    Яңыл, Татарстан Республикасы
                   </p>
                 </div>
               </div>
@@ -36,20 +36,20 @@ const WeddingLocation = () => {
               <div className="pt-6 border-t border-primary/20">
                 <div className="flex items-center space-x-2 text-primary mb-4">
                   <Navigation size={20} />
-                  <span className="font-medium">Как добраться</span>
+                  <span className="font-medium">Ничек барырга</span>
                 </div>
                 <p className="text-muted-foreground">
-                  Подробную информацию о том, как добраться до места проведения, 
-                  вы можете получить по телефону или в личном сообщении.
+                  Туй урынына ничек барырга турында җентекле мәгълүматны 
+                  сез телефон буенча яки шәхси хәбәр белән ала аласыз.
                 </p>
               </div>
 
               <div className="bg-secondary/50 rounded-lg p-4">
-                <h4 className="font-elegant text-primary mb-2">Важная информация:</h4>
+                <h4 className="font-elegant text-primary mb-2">Мөһим мәгълүмат:</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Просим прибыть за 15 минут до начала церемонии</li>
-                  <li>• Парковка доступна рядом с кафе</li>
-                  <li>• При необходимости поможем с трансфером</li>
+                  <li>• Тантана башланганчы 15 минут элегрәк килергә сорыйбыз</li>
+                  <li>• Кафе янында автотуру урыны бар</li>
+                  <li>• Кирәк булса трансфер белән ярдәм итәчәкбез</li>
                 </ul>
               </div>
             </div>
@@ -61,13 +61,13 @@ const WeddingLocation = () => {
               <div className="text-center">
                 <MapPin className="mx-auto text-primary mb-4" size={48} />
                 <h3 className="text-xl font-elegant text-primary mb-2">
-                  Кафе "Туган як"
+                  "Туган як" кафесы
                 </h3>
                 <p className="text-muted-foreground">
-                  Яныль, Республика Татарстан
+                  Яңыл, Татарстан Республикасы
                 </p>
                 <p className="text-sm text-muted-foreground mt-4">
-                  Интерактивная карта будет добавлена
+                  Интерактив карта өстәләчәк
                 </p>
               </div>
             </div>

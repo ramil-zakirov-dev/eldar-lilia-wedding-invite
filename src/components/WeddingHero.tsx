@@ -16,7 +16,7 @@ const WeddingHero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <p className="text-lg md:text-xl text-foreground/80 mb-4 font-elegant tracking-wide">
-            Вы приглашены на свадьбу
+            Сез туйга чакырыласыз
           </p>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-script text-primary mb-6 leading-none">
@@ -27,13 +27,13 @@ const WeddingHero = () => {
           
           <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-romantic border border-primary/20">
             <p className="text-2xl md:text-3xl font-elegant text-primary mb-4">
-              17 августа 2025
+              17 август 2025
             </p>
             <p className="text-xl text-muted-foreground font-elegant">
               13:00
             </p>
             <p className="text-lg text-muted-foreground mt-4 font-elegant">
-              кафе "Туган як", Яныль
+              "Туган як" кафесы, Яңыл
             </p>
           </div>
         </div>

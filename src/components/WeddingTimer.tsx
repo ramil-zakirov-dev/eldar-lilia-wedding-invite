@@ -54,17 +54,17 @@ const WeddingTimer = () => {
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">
-          До нашего особенного дня
+          Безнең махсус көнебезгә кадәр
         </h2>
         <p className="text-lg text-muted-foreground mb-12 font-elegant">
-          Считаем дни до самого важного момента в нашей жизни
+          Тормышыбызның иң мөһим мизгелен көтәбез
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <TimeUnit value={timeLeft.days} label="Дни" />
-          <TimeUnit value={timeLeft.hours} label="Часы" />
-          <TimeUnit value={timeLeft.minutes} label="Минуты" />
-          <TimeUnit value={timeLeft.seconds} label="Секунды" />
+          <TimeUnit value={timeLeft.days} label="Көн" />
+          <TimeUnit value={timeLeft.hours} label="Сәгать" />
+          <TimeUnit value={timeLeft.minutes} label="Минут" />
+          <TimeUnit value={timeLeft.seconds} label="Секунд" />
         </div>
       </div>
     </section>
