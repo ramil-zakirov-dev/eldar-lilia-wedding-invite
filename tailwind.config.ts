@@ -77,8 +77,8 @@ export default {
 				'romantic': 'var(--shadow-romantic)'
 			},
 			fontFamily: {
-				'script': ['Dancing Script', 'cursive'],
-				'elegant': ['Playfair Display', 'serif']
+				'script': ['Georgia', 'Times New Roman', 'serif'],
+				'elegant': ['Arial', 'Helvetica', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
