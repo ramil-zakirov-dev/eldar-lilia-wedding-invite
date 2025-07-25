@@ -11,35 +11,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <audio id="music" src="/src/assets/music.mp3" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const audio = document.getElementById("music");
-        let wasPlayed = false; // Флаг, чтобы проиграть только один раз
-
-        window.addEventListener(
-          "scroll",
-          function () {
-            if (!wasPlayed) {
-              // Попытка воспроизведения
-              const playPromise = audio.play();
-
-              playPromise
-                .then(() => {
-                  wasPlayed = true;
-                  console.log("Музыка начала играть");
-                  // Удаляем обработчик после первого воспроизведения
-                  window.removeEventListener("scroll", arguments.callee);
-                })
-                .catch((error) => {
-                  console.error("Воспроизведение было заблокировано:", error);
-                  // Можно добавить кнопку для ручного запуска
-                });
-            }
-          },
-          { once: true }
-        ); // Опция { once: true } для автоматического удаления после первого срабатывания
-      });
-    </script>
   </body>
 </html>

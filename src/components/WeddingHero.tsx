@@ -1,6 +1,20 @@
 import heroImage from "@/assets/wedding-hero-bg.jpg";
+import { useState, useRef, useCallback } from "react";
+import musicMp3 from "@/assets/music.mp3";
 
 const WeddingHero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const togglePlayPause = useCallback(() => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  }, [isPlaying, setIsPlaying]);
+
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -36,6 +50,29 @@ const WeddingHero = () => {
               "Туган як" кафесы, Янил авылы
             </p>
           </div>
+        </div>
+
+        <div
+          className="text-primary"
+          style={{ paddingTop: 20, display: "flex", justifyContent: "center" }}
+        >
+          <button
+            onClick={togglePlayPause}
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            {isPlaying ? (
+              <>
+                <span style={{ fontSize: 12, marginRight: 6 }}>▮▮</span> стоп
+              </>
+            ) : (
+              <>▶ музыка</>
+            )}
+          </button>
+          <audio
+            ref={audioRef}
+            src={musicMp3}
+            onEnded={() => setIsPlaying(false)}
+          />
         </div>
       </div>
 
