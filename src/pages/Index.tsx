@@ -1,7 +1,6 @@
-import WeddingHero from '@/components/WeddingHero';
-import WeddingTimer from '@/components/WeddingTimer';
-import WeddingLocation from '@/components/WeddingLocation';
-import LoveStory from '@/components/LoveStory';
+import WeddingHero from "@/components/WeddingHero";
+import WeddingTimer from "@/components/WeddingTimer";
+import LoveStory from "@/components/LoveStory";
 
 const Index = () => {
   return (
@@ -9,7 +8,6 @@ const Index = () => {
       <WeddingHero />
       <WeddingTimer />
       <LoveStory />
-      <WeddingLocation />
     </div>
   );
 };

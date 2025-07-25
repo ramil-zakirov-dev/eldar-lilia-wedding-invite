@@ -3,24 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Эльдар һәм Лилия - Туй чакыруы</title>
+    <title>Эльдар һәм Лилия туена чакыру</title>
     <meta name="description" content="Эльдар һәм Лилия туена чакыру" />
     <meta name="author" content="Эльдар һәм Лилия" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <meta property="og:title" content="eldar-lilia-wedding-invite" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <audio id="music" src="/src/assets/music.mp3" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("music");
+        let wasPlayed = false; // Флаг, чтобы проиграть только один раз
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!wasPlayed) {
+              // Попытка воспроизведения
+              const playPromise = audio.play();
+
+              playPromise
+                .then(() => {
+                  wasPlayed = true;
+                  console.log("Музыка начала играть");
+                  // Удаляем обработчик после первого воспроизведения
+                  window.removeEventListener("scroll", arguments.callee);
+                })
+                .catch((error) => {
+                  console.error("Воспроизведение было заблокировано:", error);
+                  // Можно добавить кнопку для ручного запуска
+                });
+            }
+          },
+          { once: true }
+        ); // Опция { once: true } для автоматического удаления после первого срабатывания
+      });
+    </script>
   </body>
 </html>

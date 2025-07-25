@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Card } from '@/components/ui/card';
+import { useEffect, useState } from "react";
+import { Card } from "@/components/ui/card";
 
 interface TimeLeft {
   days: number;
@@ -17,7 +17,7 @@ const WeddingTimer = () => {
   });
 
   useEffect(() => {
-    const weddingDate = new Date('2025-08-17T13:00:00');
+    const weddingDate = new Date("2025-08-17T13:00:00");
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -25,8 +25,12 @@ const WeddingTimer = () => {
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         setTimeLeft({ days, hours, minutes, seconds });
@@ -42,7 +46,7 @@ const WeddingTimer = () => {
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <Card className="p-6 text-center bg-card/50 backdrop-blur-sm border-primary/20 shadow-soft">
       <div className="text-4xl md:text-5xl font-bold text-primary font-elegant mb-2">
-        {value.toString().padStart(2, '0')}
+        {value.toString().padStart(2, "0")}
       </div>
       <div className="text-sm uppercase tracking-wide text-muted-foreground font-medium">
         {label}
@@ -53,13 +57,10 @@ const WeddingTimer = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">
+        <h2 className="text-4xl md:text-5xl text-primary mb-4">
           Безнең махсус көнебезгә кадәр
         </h2>
-        <p className="text-lg text-muted-foreground mb-12 font-elegant">
-          Тормышыбызның иң мөһим мизгелен көтәбез
-        </p>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <TimeUnit value={timeLeft.days} label="Көн" />
           <TimeUnit value={timeLeft.hours} label="Сәгать" />
