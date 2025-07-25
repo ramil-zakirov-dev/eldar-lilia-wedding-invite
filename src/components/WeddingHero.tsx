@@ -56,16 +56,15 @@ const WeddingHero = () => {
           className="text-primary"
           style={{ paddingTop: 20, display: "flex", justifyContent: "center" }}
         >
-          <button
-            onClick={togglePlayPause}
-            style={{ display: "flex", alignItems: "center" }}
-          >
+          <button onClick={togglePlayPause}>
             {isPlaying ? (
-              <>
+              <span
+                style={{ fontSize: 20, display: "flex", alignItems: "center" }}
+              >
                 <span style={{ fontSize: 12, marginRight: 6 }}>▮▮</span> стоп
-              </>
+              </span>
             ) : (
-              <>▶ музыка</>
+              <span style={{ fontSize: 20 }}>▶ музыка</span>
             )}
           </button>
           <audio
